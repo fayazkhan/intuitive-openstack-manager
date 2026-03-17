@@ -18,6 +18,7 @@ Improvements
 - [ ] Add request tracing / structured logging
 - [ ] Add API versioning strategy (headers / content negotiation)
 - [ ] Stronger code quality checks (type coverage, static analysis)
+- [ ] Freeze build dependencies for reproducible installs (e.g., `pip freeze > requirements.txt`)
 
 ### Mid-term
 
