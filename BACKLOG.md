@@ -9,7 +9,7 @@ Improvements
 
 ### Short-term
 
-- [ ] GitHub Actions CI pipeline with tests and linting.
+- [x] GitHub Actions CI pipeline with tests and linting.
 - [ ] Add a Dockerfile for containerized deployment.
 - [ ] Use idempotent API design for VM creation (e.g., client-generated UUIDs).
 - [x] Fix singleton client so state persists across requests
@@ -17,6 +17,7 @@ Improvements
 - [ ] Add pagination/filtering for `GET /v1/vms`
 - [ ] Add request tracing / structured logging
 - [ ] Add API versioning strategy (headers / content negotiation)
+- [ ] Stronger code quality checks (type coverage, static analysis)
 
 ### Mid-term
 
