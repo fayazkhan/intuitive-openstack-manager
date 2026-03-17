@@ -14,7 +14,7 @@ This repo demonstrates a minimal but extensible Python-based design for:
 ## ✅ Quick start (local demo)
 
 ```bash
-python -m venv .venv
+python3.14 -m venv .venv
 source .venv/bin/activate
 pip install -e .[dev]
 

@@ -7,7 +7,7 @@ name = "intuitive-openstack-manager"
 version = "0.1.0"
 description = "Proof-of-concept REST API for managing OpenStack virtual machine lifecycles."
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.14"
 keywords = ["openstack", "vm", "api", "fastapi"]
 license = { text = "MIT" }
 
