@@ -16,8 +16,10 @@ This repo demonstrates a minimal but extensible Python-based design for:
 ```bash
 python -m venv .venv
 source .venv/bin/activate
-pip install -r requirements.txt
-uvicorn src.main:app --reload --host 0.0.0.0 --port 8000
+pip install -e .[dev]
+
+# Run the API
+uvicorn intuitive_openstack_manager.main:app --reload --host 0.0.0.0 --port 8000
 ```
 
 Then open:
@@ -55,5 +57,6 @@ Then open:
 ## 🧪 Run tests
 
 ```bash
-pytest -q
+source .venv/bin/activate
+python -m pytest -q
 ```
