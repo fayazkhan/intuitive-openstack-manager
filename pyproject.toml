@@ -23,9 +23,11 @@ dependencies = [
 dev = [
   "pytest>=8.3.0",
   "httpx>=0.24.0",
+  "pytest-cov>=4.0.0",
+  "codecov>=2.1.13",
 ]
 
 [tool.pytest.ini_options]
 minversion = "7.0"
-addopts = "-q"
+addopts = "-q --cov=intuitive_openstack_manager --cov-report=xml"
 testpaths = ["tests"]
