@@ -1,5 +1,7 @@
 # intuitive-openstack-manager
 
+[![CI](https://github.com/fayazkhan/intuitive-openstack-manager/actions/workflows/ci.yml/badge.svg)](https://github.com/fayazkhan/intuitive-openstack-manager/actions/workflows/ci.yml) [![Python](https://img.shields.io/badge/python-3.14%2B-blue)](https://www.python.org/)
+
 A proof-of-concept REST API for managing OpenStack virtual machine lifecycles.
 
 This repo demonstrates a minimal but extensible Python-based design for:
