@@ -13,6 +13,7 @@ class VMStatus(str, Enum):
 
 
 class VMCreateRequest(BaseModel):
+    id: str = Field(..., description="Client-supplied unique VM identifier (for idempotency)")
     name: str = Field(..., description="Human-friendly name for the VM")
     image: str = Field(..., description="Image name or ID to boot from")
     flavor: str = Field(..., description="Flavor name or ID to use for sizing")

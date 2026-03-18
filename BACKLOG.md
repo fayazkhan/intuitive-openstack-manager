@@ -10,7 +10,7 @@ Improvements
 ### Short-term
 
 - [x] GitHub Actions CI pipeline with tests and linting.
-- [ ] Add a Dockerfile for containerized deployment.
+- [x] Add a Dockerfile for containerized deployment.
 - [ ] Use idempotent API design for VM creation (e.g., client-generated UUIDs).
 - [x] Fix singleton client so state persists across requests
 - [x] Convert deprecated Pydantic APIs (`BaseModel.copy`, etc.)

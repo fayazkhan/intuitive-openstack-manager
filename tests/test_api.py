@@ -15,6 +15,7 @@ def test_vm_lifecycle_flow(client: TestClient) -> None:
     create_resp = client.post(
         "/v1/vms",
         json={
+            "id": "test-vm-uuid-1",
             "name": "test-vm",
             "image": "ubuntu-22.04",
             "flavor": "small",
@@ -58,6 +59,7 @@ def test_invalid_action_returns_400(client: TestClient) -> None:
     create_resp = client.post(
         "/v1/vms",
         json={
+            "id": "test-vm-uuid-2",
             "name": "test-vm-2",
             "image": "ubuntu-22.04",
             "flavor": "small",

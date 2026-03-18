@@ -62,21 +62,23 @@ class MockOpenStackClient(OpenStackClient):
             return vm
 
     def create_vm(self, request: VMCreateRequest) -> VMInstance:
-        now = datetime.utcnow()
-        vm_id = str(uuid.uuid4())
-        vm = VMInstance(
-            id=vm_id,
-            name=request.name,
-            image=request.image,
-            flavor=request.flavor,
-            network=request.network,
-            status=VMStatus.BUILD,
-            created_at=now,
-            updated_at=now,
-        )
+        vm_id = request.id
         with self._lock:
+            # Idempotency: if VM with this id already exists, return it
+            if vm_id in self._store:
+                return self._store[vm_id]
+            now = datetime.utcnow()
+            vm = VMInstance(
+                id=vm_id,
+                name=request.name,
+                image=request.image,
+                flavor=request.flavor,
+                network=request.network,
+                status=VMStatus.BUILD,
+                created_at=now,
+                updated_at=now,
+            )
             self._store[vm_id] = vm
-
         # Simulate a transition to ACTIVE state.
         return self._transition(vm_id, VMStatus.ACTIVE)
 
