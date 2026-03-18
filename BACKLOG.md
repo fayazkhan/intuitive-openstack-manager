@@ -11,12 +11,13 @@ Improvements
 
 - [x] GitHub Actions CI pipeline with tests and linting.
 - [x] Add a Dockerfile for containerized deployment.
-- [ ] Use idempotent API design for VM creation (e.g., client-generated UUIDs).
+- [x] Use idempotent API design for VM creation (e.g., client-generated UUIDs).
 - [x] Fix singleton client so state persists across requests
 - [x] Convert deprecated Pydantic APIs (`BaseModel.copy`, etc.)
 - [ ] Add pagination/filtering for `GET /v1/vms`
-- [ ] Add request tracing / structured logging
+- [ ] Add metrics / structured logging
 - [ ] Add API versioning strategy (headers / content negotiation)
+- [ ] Add idempotency for update operations.
 - [ ] Stronger code quality checks (type coverage, static analysis)
 - [ ] Freeze build dependencies for reproducible installs (e.g., `pip freeze > requirements.txt`)
 
